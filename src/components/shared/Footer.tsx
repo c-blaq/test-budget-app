@@ -38,7 +38,7 @@ const Footer = () => {
     <Box
       bg="#fff"
       as="footer"
-      px="16px"
+      px="30px"
       boxShadow="0px -5px 20px 5px rgba(0, 0, 0, 0.04)"
       backdropFilter="blur(25px)"
       color="brand"
