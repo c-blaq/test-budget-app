@@ -148,7 +148,7 @@ const Budget = () => {
         </Tabs>
       </Box>
 
-      <Box py="30px">
+      <Box pt="30px">
         <Heading
           as="h2"
           mb="20px"
@@ -173,7 +173,7 @@ const Budget = () => {
         <CategoryBreakdown
           label="Savings"
           icon={savingsIcon}
-          progressValue={40}
+          progressValue={25}
           backgroundColor="#b5e4c8"
           currentAmount="20,000"
           overallAmount="42,000"

@@ -42,6 +42,11 @@ const Footer = () => {
       boxShadow="0px -5px 20px 5px rgba(0, 0, 0, 0.04)"
       backdropFilter="blur(25px)"
       color="brand"
+      position="fixed"
+      w="full"
+      bottom={0}
+      left={0}
+      right={0}
     >
       <Flex justifyContent="space-between" alignItems="center" h="87px">
         {NAV_ITEMS.map((item) => (

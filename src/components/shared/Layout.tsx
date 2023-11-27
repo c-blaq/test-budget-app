@@ -9,7 +9,7 @@ interface LayoutProps {
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
     <Flex flexDir="column" bgColor="#FCFCFC" h="100vh">
-      <Box as="main" flex="1" px="30px" color="primary.base">
+      <Box as="main" flex="1" px="30px" color="primary.base" pb="87px">
         {children}
       </Box>
       <Footer />

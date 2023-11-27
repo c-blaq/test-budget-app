@@ -27,12 +27,13 @@ const CategoryBreakdown: React.FC<CategoryBreakdownProps> = ({
   backgroundColor,
 }) => {
   return (
-    <Flex justify="space-between" align="start" gap="16px" mb="20px">
-      <Flex gap="10px" align="center">
+    <Flex justify="space-between" gap="4px" align="start" mb="20px">
+      <Flex gap="10px" align="center" minW="130px" flex="1">
         <CircularProgress
           bg={backgroundColor || "#F4E9CD"}
           value={progressValue}
           borderRadius="100%"
+          size={46}
           color="#C89104"
           trackColor="transparent"
         >
@@ -52,12 +53,20 @@ const CategoryBreakdown: React.FC<CategoryBreakdownProps> = ({
         </CircularProgress>
 
         <Box fontSize="14px">
-          <Text fontWeight={600}>{label}</Text>
+          <Text noOfLines={2} fontWeight={600}>
+            {label}
+          </Text>
           <Text color="secondary.200">{progressValue}%</Text>
         </Box>
       </Flex>
 
-      <Flex align="center" fontSize="16px">
+      <Flex
+        align="center"
+        justify="end"
+        fontSize="14px"
+        w="130px"
+        flexWrap="wrap"
+      >
         <Flex>
           <TbCurrencyNaira size="20px" />
           <Text ml="-2px">{currentAmount}</Text>
