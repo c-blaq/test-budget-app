@@ -1,8 +1,14 @@
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
+import Budget from "./pages/Budget";
+
 function App() {
   return (
-    <>
-      <h1>Welcome</h1>
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Navigate to="/budgets" />} />
+        <Route path="/budgets" element={<Budget />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
