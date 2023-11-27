@@ -16,7 +16,6 @@ import {
   MenuButton,
   MenuList,
   MenuItem,
-  Button,
 } from "@chakra-ui/react";
 import Layout from "../components/shared/Layout";
 import { NairaSign } from "../assets/svg/nairaSign.tsx";
