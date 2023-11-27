@@ -12,10 +12,16 @@ import {
   TabIndicator,
   CircularProgress,
   CircularProgressLabel,
+  Menu,
+  MenuButton,
+  MenuList,
+  MenuItem,
+  Button,
 } from "@chakra-ui/react";
 import Layout from "../components/shared/Layout";
 import { NairaSign } from "../assets/svg/nairaSign.tsx";
 import { TbCurrencyNaira } from "react-icons/tb";
+import { BsThreeDots } from "react-icons/bs";
 import CategoryBreakdown from "../components/budget/CategoryBreakdown.tsx";
 import foodIcon from "../assets/svg/foodIcon.svg";
 import savingsIcon from "../assets/svg/savingsIcon.svg";
@@ -85,14 +91,51 @@ const Budget = () => {
           colorScheme="brand"
           defaultIndex={1}
         >
-          <TabList>
-            <Tab pl="0" _selected={{ color: "brand.default" }}>
-              Last Month
-            </Tab>
-            <Tab pl="0" _selected={{ color: "brand.default" }}>
-              This Month
-            </Tab>
-          </TabList>
+          <Flex justify="space-between" align="center">
+            <TabList>
+              <Tab pl="0" _selected={{ color: "brand.default" }}>
+                Last Month
+              </Tab>
+              <Tab pl="0" _selected={{ color: "brand.default" }}>
+                This Month
+              </Tab>
+            </TabList>
+            <Menu>
+              <MenuButton color="secondary.200" fontSize="20px">
+                <BsThreeDots />
+              </MenuButton>
+              <MenuList>
+                <MenuItem mb="9px">
+                  <Flex
+                    justify="center"
+                    align="center"
+                    w="20px"
+                    h="20px"
+                    borderRadius="100%"
+                    bg="brand.light"
+                    mr="4px"
+                  >
+                    <NairaSign fill="#0466C8" />
+                  </Flex>
+                  Expenses Overview
+                </MenuItem>
+                <MenuItem mb="9px">
+                  <Flex
+                    justify="center"
+                    align="center"
+                    w="20px"
+                    h="20px"
+                    borderRadius="100%"
+                    bg="brand.light"
+                    mr="4px"
+                  >
+                    <NairaSign fill="#0466C8" />
+                  </Flex>
+                  Category Overview
+                </MenuItem>
+              </MenuList>
+            </Menu>
+          </Flex>
           <TabIndicator
             mt="-4.5px"
             height="2px"
