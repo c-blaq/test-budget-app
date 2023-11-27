@@ -52,7 +52,12 @@ const CategoryBreakdown: React.FC<CategoryBreakdownProps> = ({
           </CircularProgressLabel>
         </CircularProgress>
 
-        <Box fontSize="14px">
+        <Box
+          fontSize={{
+            base: "14px",
+            md: "16px",
+          }}
+        >
           <Text noOfLines={2} fontWeight={600}>
             {label}
           </Text>
@@ -63,8 +68,14 @@ const CategoryBreakdown: React.FC<CategoryBreakdownProps> = ({
       <Flex
         align="center"
         justify="end"
-        fontSize="14px"
-        w="130px"
+        fontSize={{
+          base: "14px",
+          md: "16px",
+        }}
+        w={{
+          base: "130px",
+          md: "auto",
+        }}
         flexWrap="wrap"
       >
         <Flex>

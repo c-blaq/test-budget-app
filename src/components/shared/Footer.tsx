@@ -39,16 +39,42 @@ const Footer = () => {
       bg="#fff"
       as="footer"
       px="30px"
+      display="flex"
+      alignItems={{
+        base: "center",
+        md: "flex-start",
+      }}
       boxShadow="0px -5px 20px 5px rgba(0, 0, 0, 0.04)"
       backdropFilter="blur(25px)"
-      color="brand"
       position="fixed"
-      w="full"
+      w={{ base: "100%", md: "180px", lg: "200px" }}
+      h={{
+        base: "87px",
+        md: "100%",
+      }}
       bottom={0}
       left={0}
-      right={0}
+      pt={{
+        base: "0",
+        md: "46px",
+      }}
     >
-      <Flex justifyContent="space-between" alignItems="center" h="87px">
+      <Flex
+        w="full"
+        flexDir={{
+          base: "row",
+          md: "column",
+        }}
+        justifyContent="space-between"
+        alignItems={{
+          base: "center",
+          md: "flex-start",
+        }}
+        gap={{
+          base: "0",
+          md: "40px",
+        }}
+      >
         {NAV_ITEMS.map((item) => (
           <Link
             as={ReactRouterLink}
@@ -64,15 +90,24 @@ const Footer = () => {
               filter: "sepia(100%) hue-rotate(1000deg) saturate(1500%)",
             }}
           >
-            <Flex flexDir="column" alignItems="center" justifyContent="center">
-              <Image
-                src={item.icon}
-                alt={item.label}
-                w="24px"
-                h="24px"
-                mb="10px"
-              />
-              <Text fontSize="12px">{item.label}</Text>
+            <Flex
+              flexDir={{
+                base: "column",
+                md: "row",
+              }}
+              alignItems="center"
+              justifyContent="center"
+              gap="10px"
+            >
+              <Image src={item.icon} alt={item.label} w="24px" h="24px" />
+              <Text
+                fontSize={{
+                  base: "12px",
+                  md: "16px",
+                }}
+              >
+                {item.label}
+              </Text>
             </Flex>
           </Link>
         ))}

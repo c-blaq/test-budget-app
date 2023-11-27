@@ -23,7 +23,13 @@ import savingsIcon from "../assets/svg/savingsIcon.svg";
 const Budget = () => {
   return (
     <Layout>
-      <Box pt="20px" pb="30px">
+      <Box
+        pt={{
+          base: "20px",
+          md: "46px",
+        }}
+        pb="30px"
+      >
         <Heading
           as="h1"
           fontSize={{
@@ -59,11 +65,14 @@ const Budget = () => {
           borderRadius="10px"
           fontWeight="700"
           px="20px"
-          py="8px"
+          py={{
+            base: "8px",
+            md: "20px",
+          }}
           letterSpacing="-1.2px"
         >
           <Flex align="center">
-            <TbCurrencyNaira size="30px" />
+            <TbCurrencyNaira />
             <Text ml="-6px">120,000</Text>
           </Flex>
         </Box>
@@ -128,7 +137,7 @@ const Budget = () => {
                   mb="8px"
                   color="secondary.200"
                 >
-                  Amount sepnt so far
+                  Amount spent so far
                 </Text>
 
                 <Flex justify="center" color="brand.light">
