@@ -16,6 +16,9 @@ import {
 import Layout from "../components/shared/Layout";
 import { NairaSign } from "../assets/svg/nairaSign.tsx";
 import { TbCurrencyNaira } from "react-icons/tb";
+import CategoryBreakdown from "../components/budget/CategoryBreakdown.tsx";
+import foodIcon from "../assets/svg/foodIcon.svg";
+import savingsIcon from "../assets/svg/savingsIcon.svg";
 
 const Budget = () => {
   return (
@@ -143,6 +146,47 @@ const Budget = () => {
             </TabPanel>
           </TabPanels>
         </Tabs>
+      </Box>
+
+      <Box py="30px">
+        <Heading
+          as="h2"
+          mb="20px"
+          fontSize={{
+            base: "20px",
+            md: "24px",
+          }}
+          fontWeight="600"
+        >
+          Category Breakdown
+        </Heading>
+
+        <CategoryBreakdown
+          label="Food and Drink"
+          icon={foodIcon}
+          progressValue={40}
+          backgroundColor="#F4E9CD"
+          currentAmount="20,000"
+          overallAmount="42,000"
+        />
+
+        <CategoryBreakdown
+          label="Savings"
+          icon={savingsIcon}
+          progressValue={40}
+          backgroundColor="#b5e4c8"
+          currentAmount="20,000"
+          overallAmount="42,000"
+        />
+
+        <CategoryBreakdown
+          label="Savings"
+          icon={savingsIcon}
+          progressValue={40}
+          backgroundColor="#b5e4c8"
+          currentAmount="20,000"
+          overallAmount="42,000"
+        />
       </Box>
     </Layout>
   );
